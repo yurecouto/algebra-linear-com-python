@@ -39,7 +39,22 @@ def produto_escalar(vetor1, vetor2):
 
     return ep
 
-'''print(produto_escalar([1, 2], [5, 3]))'''
+'''print(produto_escalar([-2, -2, 0], [-2, -2, 0]))'''
+
+
+# Multiplicação de vetores, Produto escalar
+def multiplicar_vetor(vetor1, numero):
+
+    # multiplica vetor1 e vetor2
+    a = list()
+    for index in range(len(vetor1)):
+        a.append(vetor1[index] * numero)
+
+    # soma os resultados para obter o produto escalar
+
+    return a
+
+'''print(multiplicar_vetor([1, 2, 4], 5))'''
 
 
 # Formula para calcular o módulo
@@ -106,3 +121,4 @@ def proj_ortogonal(vetor1, vetor2):
     return vetor_proj
 
 '''print(proj_ortogonal([1,-3,2], [2,3,-5]))'''
+
