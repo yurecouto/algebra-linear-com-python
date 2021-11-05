@@ -1,16 +1,46 @@
 from math import sqrt 
 
+
 # Soma de vetores
-def soma_vetores(vetor1, vetor2):
+def soma_vetores(*vetores):
 
-    # soma as respectivas dimensões
-    a = list()
-    for index in range(len(vetor1)):
-        a.append(vetor1[index] + vetor2[index])
+    lenght = len(vetores[0])
+    vetor_soma = list()
 
-    return a
+    # Separa por index (sendo cada index uma dimensão do vetor)
+    for index in range(0, lenght):
 
-'''print(soma_vetores([-1, 3], [10, 20]))'''
+        # Faz a operação com a dimensão de cada vetor
+        soma = list()
+        for vetor in vetores:
+            soma.append(vetor[index])
+
+        vetor_soma.append(sum(soma))
+        soma.clear
+    
+    return vetor_soma
+            
+'''print(soma_vetores([5, 3, -15], [-10, 20, 0], [3, -14, 6]))'''
+
+
+# Soma de vetores em lista
+def soma_vetores_lista(lista):
+
+    lenght = len(lista[0])
+    vetor_soma = list()
+
+    for index in range(0, lenght):
+
+        soma = list()
+        for vetor in lista:
+            soma.append(vetor[index])
+
+        vetor_soma.append(sum(soma))
+        soma.clear
+    
+    return vetor_soma
+            
+'''print(soma_vetores_lista([[5, 3, -15], [-10, 20, 0], [3, -14, 6]]))'''
 
 
 # Subtração de vetores
@@ -39,7 +69,7 @@ def produto_escalar(vetor1, vetor2):
 
     return ep
 
-'''print(produto_escalar([-2, -2, 0], [-2, -2, 0]))'''
+'''print(produto_escalar([5, -1], [5, -1]))'''
 
 
 # Multiplicação de vetores, Produto escalar
@@ -54,7 +84,7 @@ def multiplicar_vetor(vetor1, numero):
 
     return a
 
-'''print(multiplicar_vetor([1, 2, 4], 5))'''
+'''print(multiplicar_vetor([2, 1], 3))'''
 
 
 # Formula para calcular o módulo

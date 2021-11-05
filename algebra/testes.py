@@ -1,9 +1,7 @@
-from vetores import multiplicar_vetor, produto_escalar
+a = [5, -4]
+b = [5, -4]
 
-
-a = [[] * 4]
-print(a)
-
+print(a+b)
 
 '''
     lenght = len(vetores)
