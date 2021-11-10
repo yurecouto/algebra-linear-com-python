@@ -88,7 +88,7 @@ def multiplicar_vetor(vetor1, numero):
 
 
 # Formula para calcular o módulo
-def modulo(vetor):
+def modulo_vetor(vetor):
 
     # faz a multiplicação do vetor por si mesmo
     m = produto_escalar(vetor, vetor)    
@@ -98,7 +98,7 @@ def modulo(vetor):
     
     return modulo
 
-'''print(modulo([2,5,-7]))'''
+'''print(modulo_vetor([2,5,-7]))'''
 
 
 # Formula para descobrir o cosseno de theta
@@ -108,10 +108,10 @@ def cos_theta(vetor1, vetor2):
     m = produto_escalar(vetor1, vetor2)
 
     # primeiro modulo
-    mod1 = modulo(vetor1)
+    mod1 = modulo_vetor(vetor1)
 
     # segundo modulo
-    mod2 = modulo(vetor2)
+    mod2 = modulo_vetor(vetor2)
 
     #formula para obtenção do cosseno de theta
     cos = m / (mod1 * mod2)
@@ -122,7 +122,7 @@ def cos_theta(vetor1, vetor2):
 
 
 # Formula para ortogonalidade
-def ortogonalidade(vetor1, vetor2):
+def ortogonalidade_vetores(vetor1, vetor2):
 
     # Se vetor1 * vetor2 == 0, 
     # então o angulo theta entre eles será 90º 
@@ -131,7 +131,7 @@ def ortogonalidade(vetor1, vetor2):
     
     return False
 
-'''print(ortogonalidade([4,4], [4,-4]))'''
+'''print(ortogonalidade_vetores([4,4], [4,-4]))'''
 
 
 # Formula da projeção ortogonal
